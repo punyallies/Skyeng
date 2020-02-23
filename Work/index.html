@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 1</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+
+  
+
+</head>
+<body>
+  <section class="rate__section">
+    <ul class="rate__list">
+      <li class="rate__item">
+        <a Id="link__1">
+          <img src="img/device.svg">
+          <h1>mobile</h1>
+          <p class="text__item">Get notification about new releases in our mobile app.</p>
+          <p class="cost__item"><sup>$</sup>10<span>/month</span></p>
+        </a>
+      </li>
+      <li class="rate__item">
+        <a Id="link__2">
+          <img src="img/laptop.svg">
+          <h1>desktop</h1>
+          <p class="text__item">Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
+          <p class="cost__item"><sup>$</sup>15<span>/month</span></p>
+        </a>
+      </li>
+      <li class="rate__item">
+        <a Id="link__3">
+        <img src="img/monitor.svg">
+        <h1>tv</h1>
+        <p class="text__item">Watch your favorite series at home on large screen with our TV application.</p>
+        <p class="cost__item"><sup>$</sup>20<span>/month</span></p>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <input class="button" type="button" id="button__gf" value="Get feedback"/>
+  </section>
+
+  <div class="form__overlay" id="overlay__1"> 
+
+    <div class="form" >
+        <div class="button__exit" id="exit__1">
+          <img src="img/cross.svg" class="img__cross"/>
+        </div>
+      <h2 class="title_item">Confirmation</h2>
+      <img src="img/device.svg"/>
+      <h1>desktop</h1>
+      <p class="text__item">Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
+      <p class="cost__item"><sup>$</sup>15<span>/month</span></p>
+      <input class="button" type="button" value="Confirm and pay"/>
+    </div>
+    
+  </div>
+
+  <div class="form__overlay" id="overlay__2"> 
+
+    <div class="form" >
+        <div class="button__exit" id="exit__2">
+          <img src="img/cross.svg" class="img__cross"/>
+        </div>
+      <h2 class="title_item">Confirmation</h2>
+      <img src="img/laptop.svg"/>
+      <h1>mobile</h1>
+      <p class="text__item">Get notification about new releases in our mobile app.</p>
+      <p class="cost__item"><sup>$</sup>10<span>/month</span></p>
+      <input class="button" type="button" value="Confirm and pay"/>
+    </div>
+    
+  </div>
+
+  
+  <div class="form__overlay" id="overlay__3"> 
+
+    <div class="form" >
+        <div class="button__exit" id="exit__3">
+          <img src="img/cross.svg" class="img__cross"/>
+        </div>
+      <h2 class="title_item">Confirmation</h2>
+      <img src="img/monitor.svg"/>
+      <h1>tv</h1>
+      <p class="text__item">Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
+      <p class="cost__item"><sup>$</sup>10<span>/month</span></p>
+      <input class="button" type="button" value="Confirm and pay"/>
+    </div>
+    
+  </div>
+
+
+
+  <script>
+    var Overlay1 = document.getElementById('overlay__1');
+    var Overlay2 = document.getElementById('overlay__2');
+    var Overlay3 = document.getElementById('overlay__3');
+    var buttonForm1 = document.getElementById('link__1');
+    var buttonForm2 = document.getElementById('link__2');
+    var buttonForm3 = document.getElementById('link__3');
+    var buttonCloseForm1 = document.getElementById('exit__1');
+    var buttonCloseForm2 = document.getElementById('exit__2');
+    var buttonCloseForm3 = document.getElementById('exit__3');
+    
+
+
+      buttonForm1.onclick = function() {
+        Overlay1.style.display="block";
+      }
+
+      buttonCloseForm1.onclick = function(){
+        Overlay1.style.display = "none";
+      }
+
+      buttonForm2.onclick = function() {
+        Overlay2.style.display="block";
+      }
+
+      buttonCloseForm2.onclick = function(){
+        Overlay2.style.display = "none";
+      }
+
+      buttonForm3.onclick = function() {
+        Overlay3.style.display="block";
+      }
+
+      buttonCloseForm3.onclick = function(){
+        Overlay3.style.display = "none";
+      }
+
+
+      window.onclick = function(event) {
+        if (event.target == Overlay1) {
+        Overlay1.style.display = "none";
+        }
+
+        if (event.target == Overlay2) {
+        Overlay2.style.display = "none";
+        }
+
+        if (event.target == Overlay3) {
+        Overlay3.style.display = "none";
+        }
+      }
+  </script>
+
+
+
+
+</body>
+</html>
